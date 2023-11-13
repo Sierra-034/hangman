@@ -29,7 +29,7 @@ HANGMAN_PICS = ['''
   +---+
   O   |
  /|\  |
-      |
+ /    |
      ===''', '''
   +---+
   O   |
@@ -124,9 +124,9 @@ if __name__ == '__main__':
             if len(missed_letters) == len(HANGMAN_PICS) - 1:
                 display_board(missed_letters, correct_letters, secret_word)
                 print(f'You have run out of guesses! \nAfter'
-                      f'{str(len(missed_letters))} missed guesses'
-                      f'{str(len(correct_letters))} correct guesses,'
-                      'the word was ')
+                      f' {str(len(missed_letters))} missed guesses,'
+                      f' {str(len(correct_letters))} correct guesses,'
+                      f' the word was "{secret_word}"')
                 game_is_done = True
 
         # Ask the player if they want to play again (Only if the game is done)
